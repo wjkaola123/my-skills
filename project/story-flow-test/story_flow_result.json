@@ -1,159 +1,38 @@
 {
-  "ok": true,
-  "seed": 64,
+  "ok": false,
+  "seed": 42,
   "story": "83",
-  "trajectory": [
-    {
-      "from": "",
-      "to": "161",
-      "edge": "(enter)",
-      "by": "enter"
-    },
-    {
-      "from": "161",
-      "to": "164",
-      "edge": "Run away fast!",
-      "by": "random(seed=64)"
-    },
-    {
-      "from": "164",
-      "to": "166",
-      "edge": "Let's listen",
-      "by": "random(seed=64)"
-    },
-    {
-      "from": "166",
-      "to": "167",
-      "edge": "Take the path with wind",
-      "by": "random(seed=64)"
-    },
-    {
-      "from": "167",
-      "to": "173",
-      "edge": "Tie up the bear with vines!",
-      "by": "random(seed=64)"
-    }
-  ],
+  "trajectory": [],
   "results": [
     {
       "name": "进入·召回门命中（媒体段出现）",
       "ok": true,
-      "detail": "phrase=\"Magical Land Chapter One please\""
+      "detail": "phrase=\"Play an interactive story please\""
     },
     {
       "name": "进入·W810 start/end 契约",
       "ok": true,
-      "detail": "2 窗口合法闭合"
+      "detail": "1 窗口合法闭合"
     },
     {
       "name": "进入·无 error.report",
-      "ok": true,
-      "detail": "[]"
+      "ok": false,
+      "detail": "[{'code': 'AIP_E_TURN_TIMEOUT', 'message': 'turn-hard-limit'}]"
     },
     {
       "name": "进入·媒体段 == start 节点",
-      "ok": true,
-      "detail": "frames=833 expect=833"
+      "ok": false,
+      "detail": "frames=999 expect=833"
     },
     {
       "name": "进入·story:active 写入",
-      "ok": true,
-      "detail": "active=83"
+      "ok": false,
+      "detail": "active=195"
     },
     {
-      "name": "step1@n161·ASR 识别",
-      "ok": true,
-      "detail": "finals=['Run away fast.']"
-    },
-    {
-      "name": "step1@n161·W810 start/end 契约",
-      "ok": true,
-      "detail": "2 窗口合法闭合"
-    },
-    {
-      "name": "step1@n161·媒体段帧数 == ΣframeCount(run=['163', '164'])",
-      "ok": true,
-      "detail": "got 1652 expect 1652"
-    },
-    {
-      "name": "step1@n161·current_node 锚定到 run 末节点",
-      "ok": true,
-      "detail": "164 expect 164"
-    },
-    {
-      "name": "step2@n164·ASR 识别",
-      "ok": true,
-      "detail": "finals=[\"Let's listen.\"]"
-    },
-    {
-      "name": "step2@n164·W810 start/end 契约",
-      "ok": true,
-      "detail": "2 窗口合法闭合"
-    },
-    {
-      "name": "step2@n164·媒体段帧数 == ΣframeCount(run=['166'])",
-      "ok": true,
-      "detail": "got 1266 expect 1266"
-    },
-    {
-      "name": "step2@n164·current_node 锚定到 run 末节点",
-      "ok": true,
-      "detail": "166 expect 166"
-    },
-    {
-      "name": "step3@n166·ASR 识别",
-      "ok": true,
-      "detail": "finals=['Take the path with wind.']"
-    },
-    {
-      "name": "step3@n166·W810 start/end 契约",
-      "ok": true,
-      "detail": "2 窗口合法闭合"
-    },
-    {
-      "name": "step3@n166·媒体段帧数 == ΣframeCount(run=['167'])",
-      "ok": true,
-      "detail": "got 1374 expect 1374"
-    },
-    {
-      "name": "step3@n166·current_node 锚定到 run 末节点",
-      "ok": true,
-      "detail": "167 expect 167"
-    },
-    {
-      "name": "step4@n167·ASR 识别",
-      "ok": true,
-      "detail": "finals=['Tie up the bear with vines.']"
-    },
-    {
-      "name": "step4@n167·W810 start/end 契约",
-      "ok": true,
-      "detail": "2 窗口合法闭合"
-    },
-    {
-      "name": "step4@n167·媒体段帧数 == ΣframeCount(run=['171', '173'])",
-      "ok": true,
-      "detail": "got 4675 expect 4675"
-    },
-    {
-      "name": "step4@n167·current_node 锚定到 run 末节点",
-      "ok": true,
-      "detail": "173 expect 173"
-    },
-    {
-      "name": "step5@n173·终点 exit 后 active 删除",
-      "ok": true,
-      "detail": ""
-    },
-    {
-      "name": "step5@n173·session hash 留存(续玩)",
-      "ok": true,
-      "detail": "{'current_node': '173', 'flags': '{}'}"
-    },
-    {
-      "name": "step5@n173·PG progress=终点",
-      "ok": true,
-      "detail": "progress=173"
+      "name": "step1·current_node 可读",
+      "ok": false,
+      "detail": "session hash 丢失"
     }
   ]
 }
