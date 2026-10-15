@@ -1,22 +1,25 @@
 # my-skills
 
-个人 Claude Code / ZCode 技能全量镜像。最近同步：**2026-10-09**。
+个人 Claude Code / ZCode 技能全量镜像。最近同步：**2026-10-15**。
 
 | 目录 | 来源 | 说明 |
 |---|---|---|
-| `project/` | `/home/wj/project/.zcode/skills` + `.claude/skills/codex` | 项目级技能（agent/platform 双仓工作流），共 10 个 |
-| `user/` | `~/.agents/skills`（`~/.zcode/skills` 为软链） | 用户级通用技能，共 39 个 |
-| `plugins/` | `~/.zcode/cli/plugins/cache`（zcode 官方插件） | 插件自带技能，共 3 个 |
+| `project/` | `/home/wj/project/.zcode/skills` + `.claude/skills/codex` | 项目级技能（agent/platform 双仓工作流），共 13 个 |
+| `user/` | `~/.agents/skills`（`~/.zcode/skills` 为软链） | 用户级通用技能，共 42 个 |
+| `plugins/` | `~/.zcode/cli/plugins/cache`（zcode 官方插件） | 插件自带技能，共 3 个（来源缓存 2026-09-21 起重构为官方聚合目录，镜像保留 2026-10-09 快照） |
 
 同步口径：三个来源目录的**当前状态全量镜像**（非按使用次数精选）。`project/` 以 ZCode 侧为权威版本（WSL 环境）；`codex` 仅存在于 Claude 侧故从 `.claude/skills` 取；已剔除 `__pycache__/`、`*.pyc`、`.cache/` 运行缓存（见 `.gitignore`）。
 
-## project/（10 个）
+## project/（13 个）
 
 | 技能 | 用途 |
 |---|---|
 | aip-client-test | AIP 协议 Mock 客户端冒烟（认证→WS→语音轮次全链路） |
 | codex | 在 Claude Code 里委托本机 Codex CLI 非交互执行 |
-| skill-sync | Claude/ZCode 技能目录双向同步 |
+| prod-aip-test | 生产环境 AIP 链路冒烟（线上认证→WS→语音轮次） |
+| pull-main | 三仓 main 分支拉取到 origin 最新（不动工作区、不 force） |
+| pull-prod-logs | 生产 gateway 日志切片拉取与健康体检 |
+| skill-sync | Claude/ZCode/Codex 三端技能目录同步 |
 | startup | 启动 gateway/admin-api/web 三件套开发服务 |
 | stop-all | 停止三件套并验证端口释放 |
 | story-flow-test | 故事引擎全流程自动化测试 |
@@ -25,9 +28,9 @@
 | worktree-cleanup | 清理已合入 main 的 git worktree |
 | worktree-merge | 把 worktree 修改合并回指定分支 |
 
-## user/（39 个）
+## user/（42 个）
 
-ask-matt · chief-of-staff · claude-handoff · code-review · codebase-design · diagnosing-bugs · domain-modeling · git-guardrails-claude-code · grill-me · grill-with-docs · grilling · handoff · implement · implement-spec · improve-codebase-architecture · loop-me · migrate-to-shoehorn · pr · prototype · research · resolving-merge-conflicts · retro · scaffold-exercises · setup-matt-pocock-skills · setup-pre-commit · setup-ts-deep-modules · tdd · teach · to-questionnaire · to-spec · to-tickets · triage · wait-what · wayfinder · wizard · writing-beats · writing-for-agents · writing-fragments · writing-shape
+architecture-decision-records · ask-matt · chief-of-staff · claude-handoff · code-review · codebase-design · diagnosing-bugs · domain-modeling · find-skills · git-guardrails-claude-code · grill-me · grill-with-docs · grilling · handoff · implement · implement-spec · improve-codebase-architecture · loop-me · migrate-to-shoehorn · pr · prototype · research · resolving-merge-conflicts · retro · scaffold-exercises · setup-matt-pocock-skills · setup-pre-commit · setup-ts-deep-modules · show-me · tdd · teach · to-questionnaire · to-spec · to-tickets · triage · wait-what · wayfinder · wizard · writing-beats · writing-for-agents · writing-fragments · writing-shape
 
 ## plugins/（3 个）
 

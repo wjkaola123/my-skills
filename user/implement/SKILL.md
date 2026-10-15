@@ -16,4 +16,4 @@ Once done, call the Skill tool with "code-review" to review the work.
 
 After the code review is fully complete, if the work touches the gateway voice link, run the Skill tool with "aip-client-test" to smoke-test the AIP voice link end to end.
 
-Commit your work to the current branch.
+Before starting implementation, fetch the latest main branch and create a worktree based on it (one per repo the work touches), then commit your work to the worktree branch.
